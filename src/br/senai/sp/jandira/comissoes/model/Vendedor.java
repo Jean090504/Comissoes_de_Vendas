@@ -7,7 +7,8 @@ public class Vendedor {
     double totalDeVendas;
     double percentualDaComissao;
     double valorDaComissaoEmReais;
-    int reinicio;
+    int reinicioDePrograma;
+
     public void obterdados(){
         Scanner leitor = new Scanner(System.in);
 
@@ -23,8 +24,9 @@ public class Vendedor {
         System.out.println("Qual o total de vendas do "+nomeVendedor+" ?");
         totalDeVendas = leitor.nextDouble();
 
-
+        calcularComissao();
     }
+
     public void calcularComissao(){
         if (totalDeVendas<20000){
             percentualDaComissao = 5;
@@ -36,8 +38,6 @@ public class Vendedor {
 
         exibirResultados();
 
-
-
     }
     public void exibirResultados(){
         System.out.println("*************************************************************");
@@ -48,20 +48,19 @@ public class Vendedor {
         System.out.println("Percentual da comissão: "+percentualDaComissao+"%");
         System.out.println("Valor da comissão paga: R$"+valorDaComissaoEmReais);
         System.out.println("'*************************************************************");
+
+        reiniciarPrograma();
     }
     public void reiniciarPrograma(){
         Scanner leitura = new Scanner(System.in);
 
-        System.out.println("Calcular a comissão de outro vendedor?");
-        System.out.println("Digite '1' par sim e '0' para finalizar");
-        reinicio = leitura.nextInt();
-        if (reinicio == 1) {
+        System.out.println("Deseja calcular a comissão de outro vendedor?");
+        System.out.println("Digite '1' para sim, e '0' para finalizar o programa.");
+        reinicioDePrograma = leitura.nextInt();
+        if (reinicioDePrograma == 1) {
             obterdados();
-            calcularComissao();
-            reiniciarPrograma();
         } else {
-            System.out.println("Bye!");
-            System.out.println("  ");
+            System.out.println("Obrigado por usar o programa!");
             System.out.println("Finalizando o programa...");
         }
     }
