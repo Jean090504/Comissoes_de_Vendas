@@ -16,12 +16,12 @@ public class Vendedor {
         System.out.println("----------------------------");
 
         //obtendo o nome do vendedor
-        System.out.println("Qual o nome do vendedor? ");
+        System.out.print("Qual o nome do vendedor? ");
         nomeVendedor = leitor.nextLine();
 
 
         //obtendo total de vendas
-        System.out.println("Qual o total de vendas do "+nomeVendedor+" ?");
+        System.out.print("Qual o total de vendas do "+nomeVendedor+" ?");
         totalDeVendas = leitor.nextDouble();
 
         calcularComissao();

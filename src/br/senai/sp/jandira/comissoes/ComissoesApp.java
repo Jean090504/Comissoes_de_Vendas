@@ -11,10 +11,6 @@ public class ComissoesApp {
 
         Vendedor vendedor = new Vendedor();
         vendedor.obterdados();
-        vendedor.calcularComissao();
-        vendedor.reiniciarPrograma();
-
-
 
     }
 }
